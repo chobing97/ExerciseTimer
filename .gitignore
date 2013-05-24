@@ -33,11 +33,11 @@ ipch/
 *.opensdf
 
 # Ignore files build by ndk and eclipse
-libs/
+#libs/
 bin/
 obj/
 gen/
-assets/
+#assets/
 #.classpath
 #.project
 #.cproject
