@@ -1,0 +1,58 @@
+10
+
+dir
+507
+svn://shiraz.podotree.com/KakaoCard_Android/trunk/scripts
+svn://shiraz.podotree.com/KakaoCard_Android
+
+
+
+2012-10-04T08:11:31.181802Z
+498
+kakaoDev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0ddecf50-c172-4be6-9df1-d91f3d843b82
+
+dimens
+dir
+
+thumb_renew
+dir
+
+utils
+dir
+
+encryptStringGenerator
+dir
+
+thumbnail
+dir
+
+default
+dir
+
+lib
+dir
+
+EncryptImage
+dir
+
+thumb_small
+dir
+
+encrypter
+dir
+

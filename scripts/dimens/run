@@ -1,0 +1,70 @@
+#!/bin/sh
+
+function makeDimenFile {
+	normalDimenFile=$1
+	dp=$2
+	target=$3
+
+	echo $target
+
+	mkdir -p $(dirname $target)
+	./setDimens.php "$normalDimenFile" "$dp" "$target"
+}
+
+#######################################################
+##
+## screen size 및 각 size별 DP width 정의
+##
+#######################################################
+
+screen_sizes=(small normal large xlarge)
+index=0
+for size in ${screen_sizes[@]}
+do
+	eval $size=$index
+	let index=index+1
+done
+
+targetDPs=(
+	[$small]="240 320"
+	[$normal]="320 340 360 400"
+	[$large]="360 400 440 480"
+	[$xlarge]="480 600 720 800"
+)
+
+defaultDP=(
+	[$small]=320
+	[$normal]=320
+	[$large]=400
+	[$xlarge]=720
+)
+
+#######################################################
+##
+## START
+##
+#######################################################
+
+resDir="../../res"
+normalDimenFile=$resDir/values/dimens.xml
+
+pushd $(dirname $0) > /dev/null
+
+for size in ${screen_sizes[@]}
+do
+	for dp in ${targetDPs[${!size}]}
+	do
+		target=$resDir/values-sw${dp}dp/dimens.xml
+
+		makeDimenFile "$normalDimenFile" "$dp" "$target"
+	done
+
+	if [ $size != normal ] ; then
+		target=$resDir/values-$size/dimens.xml
+		dp=${defaultDP[${!size}]}
+
+		makeDimenFile "$normalDimenFile" "$dp" "$target"
+	fi
+done
+
+popd > /dev/null

@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/runningTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/runningtitle_marginleft"
+        android:layout_marginTop="@dimen/runningtitle_margintop"
+        android:text="@string/running_time"
+        android:gravity="center"
+        android:textSize="@dimen/title_size" />
+
+    <EditText
+        android:id="@+id/runningTimer"
+        android:layout_width="@dimen/runningtimer_width"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/runningTitle"
+        android:layout_marginLeft="@dimen/runningtimer_marginleft"
+        android:layout_marginTop="@dimen/runningtimer_margintop"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="2"
+        android:nextFocusDown="@+id/restTimer"
+        android:text="@string/default_running"
+        android:textSize="@dimen/number_size" />
+
+    <TextView
+        android:id="@+id/restTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/runningTitle"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/resttitle_marginright"
+        android:text="@string/rest_time"
+        android:gravity="center"
+        android:textSize="@dimen/title_size" />
+
+    <EditText
+        android:id="@+id/restTimer"
+        android:layout_width="@dimen/resttimer_width"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/runningTimer"
+        android:layout_alignBottom="@+id/runningTimer"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/resttimer_marginright"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="2"
+        android:nextFocusDown="@+id/repeatTimer"
+        android:text="@string/default_rest"
+        android:textSize="@dimen/number_size" />
+
+    <TextView
+        android:id="@+id/repeatTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/runningTimer"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="@dimen/repeattitle_margintop"
+        android:layout_marginLeft="@dimen/repeattitle_marginleft"
+        android:text="@string/repeat_time"
+        android:gravity="center"
+        android:textSize="@dimen/title_size" />
+
+    <EditText
+        android:id="@+id/repeatTimer"
+        android:layout_width="@dimen/repeattimer_width"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/repeatTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/repeattimer_marginleft"
+        android:layout_marginTop="@dimen/repeattimer_margintop"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="2"
+        android:text="@string/default_repeat"
+        android:textSize="@dimen/number_size" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_below="@+id/restTimer"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/startbutton_margintop"
+        android:layout_marginRight="@dimen/button_marginright"
+        android:text="@string/start"
+        android:textSize="@dimen/btext_size"  />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_below="@+id/startButton"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/resetbutton_margintop"
+        android:layout_marginRight="@dimen/button_marginright"
+        android:clickable="false"
+        android:text="@string/reset"
+        android:textSize="@dimen/btext_size" />
+    
+</RelativeLayout>

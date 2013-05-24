@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<resources>
+<dimen name="title_size">23dp</dimen>
+<dimen name="number_size">68dp</dimen>
+<dimen name="btext_size">15dp</dimen>
+<dimen name="runningtitle_margintop">15dp</dimen>
+<dimen name="runningtitle_marginleft">19dp</dimen>
+<dimen name="runningtimer_margintop">8dp</dimen>
+<dimen name="runningtimer_marginleft">8dp</dimen>
+<dimen name="runningtimer_width">113dp</dimen>
+<dimen name="resttitle_marginright">38dp</dimen>
+<dimen name="resttimer_marginright">8dp</dimen>
+<dimen name="resttimer_width">113dp</dimen>
+<dimen name="repeattitle_margintop">15dp</dimen>
+<dimen name="repeattitle_marginleft">23dp</dimen>
+<dimen name="repeattimer_margintop">8dp</dimen>
+<dimen name="repeattimer_marginleft">8dp</dimen>
+<dimen name="repeattimer_width">113dp</dimen>
+<dimen name="startbutton_margintop">15dp</dimen>
+<dimen name="resetbutton_margintop">11dp</dimen>
+<dimen name="button_width">113dp</dimen>
+<dimen name="button_height">53dp</dimen>
+<dimen name="button_marginright">8dp</dimen>
+</resources>
